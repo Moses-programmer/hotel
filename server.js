@@ -15,6 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/users", userRoutes);
 app.use("/api/hotels", hotelRoutes);
 
+app.get("/", (req, res) => {
+  res.send("🚀 Hotel API is running");
+});
+
+
 const PORT = process.env.PORT || 5000;
 
 // MongoDB connect
